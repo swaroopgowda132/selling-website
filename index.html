@@ -68,6 +68,7 @@
     background:#0b5d2a;
     color:white;
     text-decoration:none;
+    cursor:pointer;
   }
 
   .btn:hover{
@@ -117,42 +118,42 @@
       <img src="WhatsApp Image 2026-01-13 at 5.36.10 PM.jpeg">
       <h3 id="p1">Black Pepper</h3>
       <p id="p1d">Strong aroma and rich flavor.</p>
-      <a class="btn" href="https://wa.me/919008012682">Buy on WhatsApp</a>
+      <a class="btn" onclick="sendWhatsApp('Black Pepper')">Buy on WhatsApp</a>
     </div>
 
     <div class="card">
       <img src="WhatsApp Image 2026-01-13 at 5.42.38 PM.jpeg">
       <h3 id="p2">Nutmeg (Jayikayi)</h3>
       <p id="p2d">Warm spice used in sweets and curries.</p>
-      <a class="btn" href="https://wa.me/919008012682">Buy on WhatsApp</a>
+      <a class="btn" onclick="sendWhatsApp('Nutmeg (Jayikayi)')">Buy on WhatsApp</a>
     </div>
 
     <div class="card">
       <img src="dhanya.jpg">
       <h3 id="p3">Dhanya (Coriander Seeds)</h3>
       <p id="p3d">Refreshing taste and strong aroma.</p>
-      <a class="btn" href="https://wa.me/919008012682">Buy on WhatsApp</a>
+      <a class="btn" onclick="sendWhatsApp('Dhanya (Coriander Seeds)')">Buy on WhatsApp</a>
     </div>
 
     <div class="card">
       <img src="WhatsApp Image 2026-01-13 at 5.41.00 PM.jpeg">
       <h3 id="p4">Turmeric</h3>
       <p id="p4d">Golden spice with many health benefits.</p>
-      <a class="btn" href="https://wa.me/919008012682">Buy on WhatsApp</a>
+      <a class="btn" onclick="sendWhatsApp('Turmeric')">Buy on WhatsApp</a>
     </div>
 
     <div class="card">
       <img src="cardamom.jpg">
       <h3 id="p5">Cardamom (Yellaki)</h3>
       <p id="p5d">Sweet aroma used in tea and sweets.</p>
-      <a class="btn" href="https://wa.me/919008012682">Buy on WhatsApp</a>
+      <a class="btn" onclick="sendWhatsApp('Cardamom (Yellaki)')">Buy on WhatsApp</a>
     </div>
 
     <div class="card">
       <img src="ginger.jpg">
       <h3 id="p6">Aromatic Ginger (Shunti)</h3>
       <p id="p6d">Spicy ginger good for digestion.</p>
-      <a class="btn" href="https://wa.me/919008012682">Buy on WhatsApp</a>
+      <a class="btn" onclick="sendWhatsApp('Aromatic Ginger (Shunti)')">Buy on WhatsApp</a>
     </div>
 
   </div>
@@ -192,11 +193,13 @@ function setKannada(){
 function setEnglish(){
   location.reload();
 }
+
+function sendWhatsApp(item){
+  let phone = "919008012682";
+  let msg = encodeURIComponent("Hello, I want to buy: " + item);
+  window.open("https://wa.me/" + phone + "?text=" + msg, "_blank");
+}
 </script>
 
 </body>
 </html>
-
-
-
-
